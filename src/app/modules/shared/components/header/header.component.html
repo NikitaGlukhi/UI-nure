@@ -1,0 +1,46 @@
+<div class="top-banner">
+  <div class="logo">
+    <img src="../../../../../favicon.ico" alt="" />
+    <div>Аптека</div>
+  </div>
+
+  <div class="find">
+    <input type="text" class="find-input" placeholder="Поиск" size="30" />
+    <button type="submit" class="find-btn">
+      <div class="btn-text">Фильтр</div>
+    </button>
+  </div>
+
+  <div class="help">
+    <a>Как оформить заказ?</a> <br>
+    <a>Что такое "Ваша аптека"?</a>
+  </div>
+</div>
+
+<nav class="header">
+  <div class="header-body">
+    <div class="header-section"></div>
+    <div class="header-section">
+      <span>Категории товаров</span>
+      <div class="categories">
+        <div *ngFor="let category of kategories" class="categories-item">
+          {{ category }}
+        </div>
+      </div>
+    </div>
+    <div class="header-section">
+      <span>Дополнительно</span>
+      <div class="categories">
+        <div *ngFor="let add of additional" class="categories-item">
+          {{ add }}
+        </div>
+      </div>
+    </div>
+    <div class="header-section" style="text-align: left">Акции</div>
+    <div class="header-section"></div>
+    <div class="header-section">
+      <span routerLink="login">Войти</span>
+      <span style="margin-left: 30px" routerLink="register">Зарегистрироваться</span>
+    </div>
+  </div>
+</nav>

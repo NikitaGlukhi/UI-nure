@@ -1,0 +1,11 @@
+@mixin transition($duration: 0) {
+  -webkit-transition-duration: $duration;
+  -moz-transition-duration: $duration;
+  -o-transition-duration: $duration;
+  transition-duration: $duration;
+
+  -webkit-transition-property: border-radius, height, width, font-size, color, background-color, max-width, overflow, text-overflow, white-space, padding, background-color, height, width, margin-top, margin-bottom, box-shadow, -webkit-transform, text-align, opacity, color, -webkit-input-placeholder;
+  -moz-transition-property: border-radius, height, width, font-size, color, background-color, max-width, overflow, text-overflow, white-space, padding, background-color, height, width, margin-top, margin-bottom, box-shadow, -moz-transform, text-align, opacity, color,  -moz-placeholder;
+  -o-transition-property: border-radius, height, width, font-size, color, background-color, max-width, overflow, text-overflow, white-space, padding, background-color, height, width, margin-top, margin-bottom, box-shadow, -o-transform, text-align, opacity, color , -o-placeholder;
+  transition-property: border-radius, height, width, font-size, color, background-color, max-width, overflow, text-overflow, white-space, padding, background-color, height, width, margin-top, margin-bottom, box-shadow, transform, text-align, opacity, color, -input-placeholder;
+}

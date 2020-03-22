@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="products">
+    <div class="product" *ngFor="let product of products">
+      <div class="img">
+        <img src="../../../../favicon.ico" alt="" />
+      </div>
+
+      <div class="description">
+        <span>{{ product.name }}</span> <br>
+        <span>{{ product.price }} грн.</span>
+      </div>
+
+      <div class="add-pr">
+        <add-product></add-product>
+      </div>
+    </div>
+  </div>
+
+</div>

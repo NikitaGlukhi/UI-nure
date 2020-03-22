@@ -1,0 +1,38 @@
+.products {
+  z-index: 1;
+  margin-left: 400px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 210px);
+  grid-gap: 5em;
+  justify-items: center;
+  align-items: center;
+  vertical-align: middle;
+  align-content: start;
+}
+
+.product {
+  position: relative;
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #a8a8a2;
+  border-radius: 2px;
+  text-align: center;
+  line-height: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.description {
+  display: block;
+  line-height: 15px;
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 115px;
+}
+
+.add-pr {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
