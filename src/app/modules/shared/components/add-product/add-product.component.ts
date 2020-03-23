@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'add-product',
@@ -7,9 +7,13 @@ import { Component } from '@angular/core';
 })
 
 export class AddProductComponent {
+  @Input() index: number;
+  @Input() name: string;
+  @Input() price: string;
+  @Input() count: number;
 
   addProduct() {
-    document.getElementById('product').classList.toggle('open');
+    document.getElementById('product' + this.index).classList.toggle('open');
   }
 
 }

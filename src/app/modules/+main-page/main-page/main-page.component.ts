@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class MainPageComponent {
+  idx: number;
   products = [
     {
       name: 'Product',
@@ -63,5 +64,10 @@ export class MainPageComponent {
       price: 12,
       count: 22
     }
-  ]
+  ];
+
+  trackByFn(index: number): number {
+    this.idx = index;
+    return index;
+  }
 }
