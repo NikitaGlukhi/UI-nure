@@ -98,6 +98,8 @@
 }
 
 .logo {
+  user-select: none;
+  cursor: pointer;
   display: grid;
   grid-template-columns: 70px 100px;
   vertical-align: middle;

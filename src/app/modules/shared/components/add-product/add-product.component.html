@@ -1,3 +1,18 @@
-<div class="add-product" (click)="addProduct()" id="product">
+<div class="add-product" (click)="addProduct()" [id]="'product' + index">
   <div class="add-text">+</div>
+
+  <div class="add-head">
+    <span><b>{{ name }}</b></span><br>
+    <span>Цена: {{ price }} грн.</span><br>
+    <span>На складе: {{ count }} шт.</span>
+  </div>
+  <div class="add-form">
+    <form>
+      <input class="add-input" type="number" placeholder="Задайте количество товара" />
+
+      <button class="add-btn" type="submit">
+        <span class="btn-text">Добавить в корзину</span>
+      </button>
+    </form>
+  </div>
 </div>
