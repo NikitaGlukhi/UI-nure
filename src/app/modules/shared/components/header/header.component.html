@@ -21,7 +21,7 @@
   <div class="header-body">
     <div class="header-section"></div>
     <div class="header-section">
-      <span>Категории товаров</span>
+      <div class="header-title">Категории товаров</div>
       <div class="categories">
         <div *ngFor="let category of kategories" class="categories-item">
           {{ category }}
@@ -29,18 +29,20 @@
       </div>
     </div>
     <div class="header-section">
-      <span>Дополнительно</span>
+      <div class="header-title">Дополнительно</div>
       <div class="categories">
         <div *ngFor="let add of additional" class="categories-item">
           {{ add }}
         </div>
       </div>
     </div>
-    <div class="header-section" style="text-align: left">Акции</div>
+    <div class="header-section" style="text-align: left">
+      <div class="header-title">Акции</div>
+    </div>
     <div class="header-section"></div>
     <div class="header-section">
-      <span routerLink="login">Войти</span>
-      <span style="margin-left: 30px" routerLink="register">Зарегистрироваться</span>
+      <div class="header-title" routerLink="login">Войти</div>
+      <div class="header-title" routerLink="register">Зарегистрироваться</div>
     </div>
   </div>
 </nav>
