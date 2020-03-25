@@ -1,0 +1,76 @@
+@import '../../../../scss/transition';
+
+
+.product {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &-img {
+
+  }
+
+  &-info {
+
+  }
+}
+
+
+.add-field {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.btns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 30px;
+}
+
+.add-modal-btn {
+  text-align: center;
+  background-color: #6ab935;
+  width: 200px;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 15px;
+
+  &-continue {
+    text-align: center;
+    background-color: #b7b7b0;
+    width: 200px;
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 15px;
+
+    @include transition(.3s);
+
+    .add-modal-btn-text {
+      padding: 7px;
+      color: #2a2a2a;
+    }
+
+    &:hover {
+      background-color: #dfdfdf;
+    }
+  }
+
+  @include transition(.3s);
+
+  &-text {
+    padding: 7px;
+    color: white;
+  }
+
+  &:hover {
+    background-color: #8dba69;
+  }
+}
+
+.field[type="number"] {
+  border: 1px solid #a8a8a2;
+  border-radius: 2px;
+  width: 300px;
+  padding: 5px 15px;
+}

@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { BsModalService } from 'ngx-bootstrap';
+import { AddProductModal } from '../../modals/add-product/add-product.modal';
 
 @Component({
   selector: 'add-product',
@@ -12,8 +14,18 @@ export class AddProductComponent {
   @Input() price: string;
   @Input() count: number;
 
+  constructor(private readonly bsModalService: BsModalService) {}
+
   addProduct() {
-    document.getElementById('product' + this.index).classList.toggle('open');
+    this.bsModalService.show(
+      AddProductModal,
+      {
+        initialState: {
+          price: this.price,
+          name: this.name,
+          count: this.count
+        }
+      })
   }
 
 }

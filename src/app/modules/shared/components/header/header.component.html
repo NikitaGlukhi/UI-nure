@@ -1,14 +1,21 @@
-<div class="top-banner">
+<div class="top-banner" style="margin-top: 10px">
   <div class="logo">
     <img routerLink="/" src="../../../../../favicon.ico" alt="" />
     <div routerLink="/">Аптека</div>
   </div>
 
   <div class="find">
-    <input type="text" class="find-input" placeholder="Поиск" size="30" />
-    <button type="submit" class="find-btn">
-      <div class="btn-text">Фильтр</div>
-    </button>
+    <div class="btn-group" dropdown>
+      <button id="button-animated" dropdownToggle type="button" class="btn dropdown-toggle btn-color dropdown-width"
+              aria-controls="dropdown-animated">
+        {{ filter }} <span class="caret"></span>
+      </button>
+      <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu dropdown-width" role="menu" aria-labelledby="button-animated">
+        <li role="menuitem" ngDefaultControl *ngFor="let f of filters" [(ngModel)]="filter" (click)="setTitle(f)">
+          <a class="dropdown-item">{{ f }}</a>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <div class="help">

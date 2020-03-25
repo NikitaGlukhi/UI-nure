@@ -2,6 +2,8 @@ import { Component, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
+import { setTheme } from 'ngx-bootstrap/utils';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,6 +17,7 @@ export class AppComponent implements OnDestroy {
   constructor(
     private readonly router: Router
   ) {
+    setTheme('bs4');
     this.internalSubscriptions = this.router.events.subscribe(event => {
       //console.log(event);
     })

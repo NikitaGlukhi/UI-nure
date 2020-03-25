@@ -1,5 +1,4 @@
-<div class="container">
-  <div class="products">
+<div class="products">
     <div class="product" *ngFor="let product of products; trackBy: trackByFn; let i = index">
       <div class="img">
         <img src="../../../../favicon.ico" alt="" />
@@ -14,6 +13,4 @@
         <add-product [index]="i" [name]="product.name" [price]="product.price" [count]="product.count"></add-product>
       </div>
     </div>
-  </div>
-
 </div>

@@ -1,0 +1,27 @@
+<div class="modal-body">
+  <div class="product">
+    <div class="product-img">
+      <img src="../../../../../favicon.ico">
+    </div>
+
+    <div class="product-info">
+      <div class="">Название: {{ productName }}</div>
+      <div class="">Цена: {{ productPrice }} грн.</div>
+      <div class="">Доступно на складе: {{ productCount }} шт.</div>
+      <div class="">Итого: {{ productPrice * wantToBuy }} грн.</div>
+    </div>
+  </div>
+
+  <div class="add-field">
+    <input type="number" class="field" [(ngModel)]="wantToBuy" placeholder="Задайте количество товара" />
+  </div>
+
+  <div class="btns">
+    <button class="add-modal-btn-continue">
+      <div class="add-modal-btn-text">Продолжить покупки</div>
+    </button>
+    <button class="add-modal-btn" style="margin-left: 35px">
+      <div class="add-modal-btn-text">Оформить заказ</div>
+    </button>
+  </div>
+</div>
